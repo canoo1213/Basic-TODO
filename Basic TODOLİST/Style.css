@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --bg-color: #1e1e2e;
+    --main-color: #00ffee;
+    --text-color: white;
+    --shadow-color: rgba(0, 255, 238, 0.5);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+#notification {
+    background-color: var(--main-color);
+    color: black;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+.content {
+    text-align: center;
+    border: 2px solid var(--main-color);
+    padding: 20px;
+    width: 400px;
+    background-color: #25273c;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--shadow-color);
+    margin-top: 80px;
+    transition: 0.3s ease-in-out;
+}
+
+.content:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: var(--main-color);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #00c8cc;
+}
+
+ul {
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+}
+
+ul li {
+    background: #333;
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+ul li:hover {
+    background: #444;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
